@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { View,Text, StyleSheet,TextInput,TouchableOpacity   } from 'react-native'
+import { View,Text, StyleSheet,TextInput,TouchableOpacity,ScrollView } from 'react-native'
 
-export const SignUpScreen = () => {
+export const SignUpScreen = ({ navigation }) => {
     
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
@@ -19,7 +19,7 @@ export const SignUpScreen = () => {
     // }
 
     async function submit(){
-      const data ={name:name,email:email,phone:phone,password:password}
+      const data ={name:name,email:email,password:password}
      console.log(data)
     //  const register = await axios.post("http://192.168.48.6:8000/signup",data)
     // const register = await axios.post(" http://127.0.0.1:8000/signup",data)
@@ -29,15 +29,20 @@ export const SignUpScreen = () => {
      setName('');
      alert("registered succesfully")
 
-    //  navigation.navigate('login')
+     navigation.navigate('login')
+
+    }
+
+    const pushlogin = ()=>{
+      navigation.navigate('login')
 
     }
 
 
-
-
     return (
+      
       <View style={styles.container}>
+        <ScrollView>
         <View style={{ marginTop: 60 }}>
           <Text style={{ textAlign: "center", fontSize: 40 }}>Sign Up</Text>
         </View>
@@ -75,9 +80,24 @@ export const SignUpScreen = () => {
            
            <Text style={{textAlign:'center',fontSize:40,marginTop:30}}>OR</Text>
            
-        <TouchableOpacity style={styles.button1} onPress={submit}>
+        <TouchableOpacity style={styles.button1} onPress={pushlogin} >
             <Text style={{fontSize:20 }} >Already a user?Log in</Text>            
         </TouchableOpacity>
+
+        <TouchableOpacity style={styles.button2} >
+            <Text style={{fontSize:20 }} >Forgot Password</Text>            
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.button2} >
+            <Text style={{fontSize:20 }} >Terms and conditions</Text>            
+        </TouchableOpacity>
+     
+       <View style={{height:50,width:'100%'}}>
+
+       </View>
+
+
+        </ScrollView>
 
       </View>
     );
@@ -123,6 +143,18 @@ const styles = StyleSheet.create({
             height: 50,
             width:300,
             marginLeft:40,
+            marginTop:20,
+  
+          },
+
+          button2: {
+            alignItems: "center",
+            backgroundColor: "rgba(249, 232, 0, 0.5)",
+            padding: 10,
+            borderRadius:50,
+            height: 50,
+            width:250,
+            marginLeft:70,
             marginTop:20,
   
           }

@@ -1,6 +1,5 @@
 import React from 'react'
 import { ImageBackground, Text,View,Image,StyleSheet, ScrollView,TouchableOpacity} from 'react-native';
-import {  useFonts, Raleway_200ExtraLight} from '@expo-google-fonts/raleway';
 import AppLoading from 'expo-app-loading';
 
 // import {  useFonts, Nunito_200ExtraLight_Italic,} from '@expo-google-fonts/nunito';
@@ -12,6 +11,10 @@ import AppLoading from 'expo-app-loading';
 
     const signup = ()=>{
       navigation.navigate('signup')
+    }
+
+    const login = ()=>{
+      navigation.navigate('login')
     }
    
     const image ={ uri: "https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2Fs3.amazonaws.com%2Fappforest_uf%2Ff1633589090002x146338665670503680%2Fbackground50001.jpg?w=1536&amp;h=&amp;auto=compress&amp;dpr=1&amp;fit=max" };
@@ -35,7 +38,7 @@ import AppLoading from 'expo-app-loading';
          </View>
          </TouchableOpacity>
 
-         <TouchableOpacity>
+         <TouchableOpacity onPress={login}>
         <View style={{height:45,width:130,backgroundColor:'rgba(255, 223, 0, 0.6)',textAlign:'center',paddingLeft:35,paddingTop:6,marginLeft:140,marginTop:20,borderRadius:10,borderWidth:1}}>
             <Text style={{fontSize:20}} >Log In</Text>
          </View>
@@ -43,7 +46,7 @@ import AppLoading from 'expo-app-loading';
           {/* <Features/> */}
          <View style= {{width:'100%',height:700,backgroundColor:'rgba(128, 128, 128, 0.8)',marginTop:60}}>
            <Text style={{textAlign:'center',fontSize:40,marginTop:20,fontWeight: 'bold',borderBottomWidth: 5,width:300,marginLeft:42,borderBottomColor: "rgba(255, 223, 0, 0.6)"}}>FEATURES</Text>
-           < Text style={{marginTop:20,lineHeight:35,fontSize:20,paddingTop:10,textAlign: 'center', fontFamily:'Raleway_200ExtraLight',paddingLeft:5,paddingRight:3,}} >
+           < Text style={{marginTop:20,lineHeight:35,fontSize:20,paddingTop:10,textAlign: 'center',paddingLeft:5,paddingRight:3,}} >
            Bmarchai Studios gives you the chance to be have free access to the same fitness secrets taught to some real models in L.A., and many of the workouts  have things you've never seen before. Way more that just squats and push-ups, are {'\n'} workouts include; 
            {'\n'}  lifting the breast area, inner thigh gap, toning the bra strap area, 
              lower pouch area (no not just knee tucks).{'\n'} and more. 
