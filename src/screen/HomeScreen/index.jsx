@@ -24,20 +24,20 @@ import AppLoading from 'expo-app-loading';
        style={{width: 400, height: 300}} /> 
         </View>
         <TouchableOpacity>
-        <View style={{height:45,width:130,backgroundColor:'rgba(255, 223, 0, 0.6)',textAlign:'center',paddingLeft:35,paddingTop:8,marginLeft:140,marginTop:20,borderRadius:10,borderWidth:1}}>
+        <View style={{height:45,width:130,backgroundColor:'rgba(255, 223, 0, 0.6)',textAlign:'center',paddingLeft:30,paddingTop:6,marginLeft:140,marginTop:20,borderRadius:10,borderWidth:1}}>
             <Text style={{fontSize:20}} >Sign Up</Text>
          </View>
          </TouchableOpacity>
 
          <TouchableOpacity>
-        <View style={{height:45,width:130,backgroundColor:'rgba(255, 223, 0, 0.6)',textAlign:'center',paddingLeft:35,paddingTop:8,marginLeft:140,marginTop:20,borderRadius:10,borderWidth:1}}>
+        <View style={{height:45,width:130,backgroundColor:'rgba(255, 223, 0, 0.6)',textAlign:'center',paddingLeft:35,paddingTop:6,marginLeft:140,marginTop:20,borderRadius:10,borderWidth:1}}>
             <Text style={{fontSize:20}} >Log In</Text>
          </View>
          </TouchableOpacity>
           {/* <Features/> */}
          <View style= {{width:'100%',height:700,backgroundColor:'rgba(128, 128, 128, 0.8)',marginTop:60}}>
-           <Text style={{textAlign:'center',fontSize:40,marginTop:20,fontWeight: 'bold',borderBottomWidth: 5,width:300,marginLeft:40,borderBottomColor: "rgba(255, 223, 0, 0.6)"}}>FEATURES</Text>
-           < Text style={{marginTop:20,lineHeight:35,fontSize:20,paddingTop:10,textAlign: 'center', fontFamily:'Raleway_200ExtraLight'}} >
+           <Text style={{textAlign:'center',fontSize:40,marginTop:20,fontWeight: 'bold',borderBottomWidth: 5,width:300,marginLeft:42,borderBottomColor: "rgba(255, 223, 0, 0.6)"}}>FEATURES</Text>
+           < Text style={{marginTop:20,lineHeight:35,fontSize:20,paddingTop:10,textAlign: 'center', fontFamily:'Raleway_200ExtraLight',paddingLeft:5,paddingRight:3,}} >
            Bmarchai Studios gives you the chance to be have free access to the same fitness secrets taught to some real models in L.A., and many of the workouts  have things you've never seen before. Way more that just squats and push-ups, are {'\n'} workouts include; 
            {'\n'}  lifting the breast area, inner thigh gap, toning the bra strap area, 
              lower pouch area (no not just knee tucks).{'\n'} and more. 
@@ -46,34 +46,34 @@ import AppLoading from 'expo-app-loading';
          </View>
           {/* <WorkOut/> */}
         <View>
-        <Text style={{textAlign:'center',fontSize:50,color:'rgba(255, 223, 0, 0.6)'}} >WorkOuts of this week!</Text>
-        <View style={{width:300,height:50,backgroundColor:'rgba(255, 223, 0, 0.6)',marginLeft:40,alignItem:'center',marginTop:30}} >
-          <Text style ={{textAlign:'center',fontSize:20}}>Sunday workout:{'\n'}lifting and firming the breasts</Text>
+        <Text style={{textAlign:'center',fontSize:45,color:'rgba(255, 223, 0, 0.6)'}} >WorkOuts of this week!</Text>
+        <View style={{width:300,height:52,backgroundColor:'rgba(255, 223, 0, 0.6)',marginLeft:40,alignItem:'center',marginTop:30,borderRadius:5}} >
+          <Text style ={{textAlign:'center',fontSize:18}}>Sunday workout:{'\n'}lifting and firming the breasts.</Text>
         </View>
 
-        <View style={{width:300,height:70,backgroundColor:'rgba(255, 223, 0, 0.6)',marginLeft:40,alignItem:'center',marginTop:35}} >
-          <Text style ={{textAlign:'center',fontSize:20}}>Monday workout:{'\n'} Lower Back And Lower Abs.You can use a pulley or band</Text>
+        <View style={{width:300,height:74,backgroundColor:'rgba(255, 223, 0, 0.6)',marginLeft:40,alignItem:'center',marginTop:35,borderRadius:5}} >
+          <Text style ={{textAlign:'center',fontSize:18}}>Monday workout:{'\n'} Lower Back And Lower Abs.You can use a pulley or band.</Text>
         </View>
 
-        <View style={{width:300,height:50,backgroundColor:'rgba(255, 223, 0, 0.6)',marginLeft:40,alignItem:'center',marginTop:30}} >
-          <Text style ={{textAlign:'center',fontSize:20}}>Tuesday workout:{'\n'}Shoulder Toning and Posture</Text>
+        <View style={{width:300,height:54,backgroundColor:'rgba(255, 223, 0, 0.6)',marginLeft:40,alignItem:'center',marginTop:30,borderRadius:5}} >
+          <Text style ={{textAlign:'center',fontSize:18}}>Tuesday workout:{'\n'}Shoulder Toning and Posture.</Text>
         </View>
 
-        <View style={{width:300,height:70,backgroundColor:'rgba(255, 223, 0, 0.6)',marginLeft:40,alignItem:'center',marginTop:30}} >
-          <Text style ={{textAlign:'center',fontSize:20}}>Wednesday workout:{'\n'}Inner thigh gap, these are hard but very effective.</Text>
+        <View style={{width:300,height:75,backgroundColor:'rgba(255, 223, 0, 0.6)',marginLeft:40,alignItem:'center',marginTop:30,borderRadius:5}} >
+          <Text style ={{textAlign:'center',fontSize:18}}>Wednesday workout:{'\n'}Inner thigh gap, these are hard but very effective.</Text>
         </View>
        
-        <View style={{width:300,height:70,backgroundColor:'rgba(255, 223, 0, 0.6)',marginLeft:40,alignItem:'center',marginTop:30}} >
-          <Text style ={{textAlign:'center',fontSize:20}}>Thursday workout:{'\n'}Obliques, to target that hourglass figure</Text>
+        <View style={{width:300,height:75,backgroundColor:'rgba(255, 223, 0, 0.6)',marginLeft:40,alignItem:'center',marginTop:30,borderRadius:5}} >
+          <Text style ={{textAlign:'center',fontSize:18}}>Thursday workout:{'\n'}Obliques, to target that hourglass figure.</Text>
         </View>
       
-        <View style={{width:300,height:80,backgroundColor:'rgba(255, 223, 0, 0.6)',marginLeft:40,alignItem:'center',marginTop:30}} >
-          <Text style ={{textAlign:'center',fontSize:20}}>Friday workout:{'\n'}O Wow, all about the triceps, a bit different though</Text>
+        <View style={{width:300,height:80,backgroundColor:'rgba(255, 223, 0, 0.6)',marginLeft:40,alignItem:'center',marginTop:30,borderRadius:5}} >
+          <Text style ={{textAlign:'center',fontSize:18}}>Friday workout:{'\n'}O Wow, all about the triceps, a bit different though.</Text>
         </View>
 
 
-        <View style={{width:300,height:80,backgroundColor:'rgba(255, 223, 0, 0.6)',marginLeft:40,alignItem:'center',marginTop:30}} >
-          <Text style ={{textAlign:'center',fontSize:20}}>Saturday workout:{'\n'} Ok time for glutes with a little twist</Text>
+        <View style={{width:300,height:80,backgroundColor:'rgba(255, 223, 0, 0.6)',marginLeft:40,alignItem:'center',marginTop:30,borderRadius:5}} >
+          <Text style ={{textAlign:'center',fontSize:18}}>Saturday workout:{'\n'} Ok time for glutes with a little twist.</Text>
         </View>
 
        </View>  
