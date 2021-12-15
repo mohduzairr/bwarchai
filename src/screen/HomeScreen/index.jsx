@@ -2,11 +2,17 @@ import React from 'react'
 import { ImageBackground, Text,View,Image,StyleSheet, ScrollView,TouchableOpacity} from 'react-native';
 import {  useFonts, Raleway_200ExtraLight} from '@expo-google-fonts/raleway';
 import AppLoading from 'expo-app-loading';
+
 // import {  useFonts, Nunito_200ExtraLight_Italic,} from '@expo-google-fonts/nunito';
 
 
 
- export const HomeScreen = () => {
+ export const HomeScreen = ({ navigation }) => {
+
+
+    const signup = ()=>{
+      navigation.navigate('signup')
+    }
    
     const image ={ uri: "https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2Fs3.amazonaws.com%2Fappforest_uf%2Ff1633589090002x146338665670503680%2Fbackground50001.jpg?w=1536&amp;h=&amp;auto=compress&amp;dpr=1&amp;fit=max" };
 
@@ -23,7 +29,7 @@ import AppLoading from 'expo-app-loading';
          <Image source={{uri: 'https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2Fs3.amazonaws.com%2Fappforest_uf%2Ff1633590332624x150773598429397860%2Fbreelaun_Metal%2520%25282%2529%2520%25281%2529.png?w=768&amp;h=535&amp;auto=compress&amp;fit=crop&amp;dpr=1'}}
        style={{width: 400, height: 300}} /> 
         </View>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={signup}>
         <View style={{height:45,width:130,backgroundColor:'rgba(255, 223, 0, 0.6)',textAlign:'center',paddingLeft:30,paddingTop:6,marginLeft:140,marginTop:20,borderRadius:10,borderWidth:1}}>
             <Text style={{fontSize:20}} >Sign Up</Text>
          </View>
