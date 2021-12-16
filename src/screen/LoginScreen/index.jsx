@@ -1,20 +1,22 @@
-import React,{ useState } from "react";
-import { View,Text,StyleSheet,TextInput,TouchableOpacity,ScrollView} from "react-native";
-
-
+import React, { useState } from "react";
+import {
+  View,
+  Text,
+  StyleSheet,
+  TextInput,
+  TouchableOpacity,
+  ScrollView,
+} from "react-native";
 
 export const LoginScreen = ({ navigation }) => {
-   
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
-   
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-    async function login(){
-      const data ={email:email,password:password}
-     console.log(data)
-      //  const register = await axios.post("http://192.168.48.6:8000/api/login",data)
+  async function login() {
+    const data = { email: email, password: password };
+    console.log(data);
+    //  const register = await axios.post("http://192.168.48.6:8000/api/login",data)
     //    navigation.navigate('profile')
-       
 
     //    if (response.success == false) {
     //     setMessage(response.error);
@@ -26,18 +28,11 @@ export const LoginScreen = ({ navigation }) => {
     //     navigation.navigate('profile')
 
     // }
-    navigation.navigate('videoscreen')
-
+    navigation.navigate("videoscreen");
   }
-  const pushsignup = ()=>{
-    navigation.navigate('signup')
-  }
-
-  
-
-
-
-
+  const pushsignup = () => {
+    navigation.navigate("signup");
+  };
 
   return (
     <View style={styles.container}>
@@ -46,7 +41,6 @@ export const LoginScreen = ({ navigation }) => {
           <Text style={{ textAlign: "center", fontSize: 40 }}>Log In</Text>
         </View>
         <View style={{ marginTop: 30 }}>
-         
           <View style={styles.textinput}>
             <TextInput
               placeholder="Email"
@@ -74,7 +68,7 @@ export const LoginScreen = ({ navigation }) => {
           OR
         </Text>
 
-        <TouchableOpacity style={styles.button1} onPress={pushsignup} >
+        <TouchableOpacity style={styles.button1} onPress={pushsignup}>
           <Text style={{ fontSize: 20 }}>Not a User Yet? Sign Up</Text>
         </TouchableOpacity>
 

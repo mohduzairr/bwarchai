@@ -1,52 +1,54 @@
-import React, { useState } from 'react'
-import { View,Text, StyleSheet,TextInput,TouchableOpacity,ScrollView } from 'react-native'
+import React, { useState } from "react";
+import {
+  View,
+  Text,
+  StyleSheet,
+  TextInput,
+  TouchableOpacity,
+  ScrollView,
+} from "react-native";
 
 export const SignUpScreen = ({ navigation }) => {
-    
-    const [name, setName] = useState("")
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-    // const submit = ()=>{
-      
-    //   console.log("clicked me")
-    //   // ToastAndroid.show("successful register",TestAndriod.SHORT)
+  // const submit = ()=>{
 
-    //   const data ={name:name,email:email,phone:phone,password:password}
-    //   console.log(data)
-    //   signup(data)
-     
-    // }
+  //   console.log("clicked me")
+  //   // ToastAndroid.show("successful register",TestAndriod.SHORT)
 
-    async function submit(){
-      const data ={name:name,email:email,password:password}
-     console.log(data)
+  //   const data ={name:name,email:email,phone:phone,password:password}
+  //   console.log(data)
+  //   signup(data)
+
+  // }
+
+  async function submit() {
+    const data = { name: name, email: email, password: password };
+    console.log(data);
     //  const register = await axios.post("http://192.168.48.6:8000/signup",data)
     // const register = await axios.post(" http://127.0.0.1:8000/signup",data)
     //  console.log("1234.."+register);
-     setEmail('');
-     setPassword('');
-     setName('');
-     alert("registered succesfully")
+    setEmail("");
+    setPassword("");
+    setName("");
+    alert("registered succesfully");
 
-     navigation.navigate('login')
+    navigation.navigate("login");
+  }
 
-    }
+  const pushlogin = () => {
+    navigation.navigate("login");
+  };
 
-    const pushlogin = ()=>{
-      navigation.navigate('login')
-
-    }
-
-
-    return (
-      
-      <View style={styles.container}>
-        <ScrollView>
+  return (
+    <View style={styles.container}>
+      <ScrollView>
         <View style={{ marginTop: 60 }}>
           <Text style={{ textAlign: "center", fontSize: 40 }}>Sign Up</Text>
         </View>
-        <View style={{marginTop:30}}> 
+        <View style={{ marginTop: 30 }}>
           <View style={styles.textinput}>
             <TextInput
               placeholder="user name"
@@ -72,92 +74,84 @@ export const SignUpScreen = ({ navigation }) => {
               onChangeText={(text) => setPassword(text)}
             />
           </View>
-        </View>   
+        </View>
 
         <TouchableOpacity style={styles.button} onPress={submit}>
-            <Text style={{fontSize:20 }} >Sign Up</Text>            
-        </TouchableOpacity>
-           
-           <Text style={{textAlign:'center',fontSize:40,marginTop:30}}>OR</Text>
-           
-        <TouchableOpacity style={styles.button1} onPress={pushlogin} >
-            <Text style={{fontSize:20 }} >Already a user?Log in</Text>            
+          <Text style={{ fontSize: 20 }}>Sign Up</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.button2} >
-            <Text style={{fontSize:20 }} >Forgot Password</Text>            
+        <Text style={{ textAlign: "center", fontSize: 40, marginTop: 30 }}>
+          OR
+        </Text>
+
+        <TouchableOpacity style={styles.button1} onPress={pushlogin}>
+          <Text style={{ fontSize: 20 }}>Already a user?Log in</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.button2} >
-            <Text style={{fontSize:20 }} >Terms and conditions</Text>            
+        <TouchableOpacity style={styles.button2}>
+          <Text style={{ fontSize: 20 }}>Forgot Password</Text>
         </TouchableOpacity>
-     
-       <View style={{height:50,width:'100%'}}>
 
-       </View>
+        <TouchableOpacity style={styles.button2}>
+          <Text style={{ fontSize: 20 }}>Terms and conditions</Text>
+        </TouchableOpacity>
 
-
-        </ScrollView>
-
-      </View>
-    );
-}
+        <View style={{ height: 50, width: "100%" }}></View>
+      </ScrollView>
+    </View>
+  );
+};
 
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: "rgb(247, 189, 0)",
-    },
-    textinput:{
-        height: 50,
-        width:300,
-        margin: 12,
-        padding: 10,
-        borderWidth:0,  
-        backgroundColor:'white',
-        marginLeft:40,
-        borderRadius:10
-        },
-        
-        // heading:{
-        //   fontSize:30,
-        // },
-       
-        button: {
-          alignItems: "center",
-          backgroundColor: "rgb(35, 87, 137)",
-          padding: 10,
-          borderRadius:50,
-          height: 50,
-          width:300,
-          marginLeft:40,
-          marginTop:20,
+  container: {
+    flex: 1,
+    backgroundColor: "rgb(247, 189, 0)",
+  },
+  textinput: {
+    height: 50,
+    width: 300,
+    margin: 12,
+    padding: 10,
+    borderWidth: 0,
+    backgroundColor: "white",
+    marginLeft: 40,
+    borderRadius: 10,
+  },
 
-        },
+  // heading:{
+  //   fontSize:30,
+  // },
 
-        button1: {
-            alignItems: "center",
-            backgroundColor: "rgba(249, 232, 0, 0.5)",
-            padding: 10,
-            borderRadius:50,
-            height: 50,
-            width:300,
-            marginLeft:40,
-            marginTop:20,
-  
-          },
+  button: {
+    alignItems: "center",
+    backgroundColor: "rgb(35, 87, 137)",
+    padding: 10,
+    borderRadius: 50,
+    height: 50,
+    width: 300,
+    marginLeft: 40,
+    marginTop: 20,
+  },
 
-          button2: {
-            alignItems: "center",
-            backgroundColor: "rgba(249, 232, 0, 0.5)",
-            padding: 10,
-            borderRadius:50,
-            height: 50,
-            width:250,
-            marginLeft:70,
-            marginTop:20,
-  
-          }
-   
-  });
-  
+  button1: {
+    alignItems: "center",
+    backgroundColor: "rgba(249, 232, 0, 0.5)",
+    padding: 10,
+    borderRadius: 50,
+    height: 50,
+    width: 300,
+    marginLeft: 40,
+    marginTop: 20,
+  },
+
+  button2: {
+    alignItems: "center",
+    backgroundColor: "rgba(249, 232, 0, 0.5)",
+    padding: 10,
+    borderRadius: 50,
+    height: 50,
+    width: 250,
+    marginLeft: 70,
+    marginTop: 20,
+  },
+});
