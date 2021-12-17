@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Ionicons } from '@expo/vector-icons';
+import { Ionicons } from "@expo/vector-icons";
 
 import {
   ImageBackground,
@@ -12,12 +12,13 @@ import {
 } from "react-native";
 import AppLoading from "expo-app-loading";
 import { Video } from "./components/Video";
+import Calender from "./components/Calender";
+import { BackButton } from "../../common/components/BackButton";
 
 // import {  useFonts, Nunito_200ExtraLight_Italic,} from '@expo-google-fonts/nunito';
 
 export const VideoScreen = ({ navigation }) => {
-
-// const [videos, setVideos] = useState('')
+  const [startdate, setStartDate] = useState("");
 
   const signup = () => {
     navigation.navigate("signup");
@@ -30,12 +31,13 @@ export const VideoScreen = ({ navigation }) => {
   return (
     <>
       <ScrollView>
-     
         <ImageBackground source={image} resizeMode="cover" style={styles.image}>
-        <TouchableOpacity onPress={() => navigation.goBack()}  >
-        <Ionicons name="chevron-back-outline" size={30} color="black"  style={{zIndex:10,marginTop:40,color:'rgba(255, 223, 0, 0.6)'}} />
-
-        </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.bckbtn}
+            onPress={() => navigation.goBack()}
+          >
+            <BackButton />
+          </TouchableOpacity>
           <View style={styles.container}>
             <Image
               source={{
@@ -76,6 +78,10 @@ export const VideoScreen = ({ navigation }) => {
                 </Text>
               </TouchableOpacity>
 
+              {/* <Calender
+                 startdate={startdate}
+               /> */}
+
               <TouchableOpacity style={styles.button2}>
                 <Text style={{ fontSize: 20 }}>14:47</Text>
               </TouchableOpacity>
@@ -90,25 +96,21 @@ export const VideoScreen = ({ navigation }) => {
             </TouchableOpacity>
           </View>
 
-            <View style={styles.button4}>
+          <View style={styles.button4}>
             <TouchableOpacity>
               <Text style={{ textAlign: "center", fontSize: 18 }}>
-                
                 Thursday workout:{"\n"}Obliques, to target that hourglass
                 figure.
               </Text>
-              </TouchableOpacity>
-
-            </View>
+            </TouchableOpacity>
+          </View>
 
           <Video />
           {/* <Video />
           <Video />
           <Video /> */}
 
-          
-
-           <Image
+          <Image
             source={{
               uri: "https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2Fs3.amazonaws.com%2Fappforest_uf%2Ff1633592508682x145244526266205220%2Fbreelaun_Neon%2520%25282%2529.png?w=512&amp;h=342&amp;auto=compress&amp;fit=crop&amp;dpr=1",
             }}
@@ -119,7 +121,7 @@ export const VideoScreen = ({ navigation }) => {
               marginTop: 90,
               borderWidth: 1,
             }}
-          /> 
+          />
 
           <View>
             <TouchableOpacity style={styles.button5}>
@@ -149,9 +151,9 @@ export const VideoScreen = ({ navigation }) => {
             >
               Step 1: Start
             </Text>
-          </View> 
+          </View>
 
-           <View style={{ width: "100%", height: 700 }}>
+          <View style={{ width: "100%", height: 700 }}>
             <Text
               style={{
                 lineHeight: 35,
@@ -171,8 +173,7 @@ export const VideoScreen = ({ navigation }) => {
               make the best of yourself,{"\n"}you can remind yourself of that,{" "}
               {"\n"}right here...{"\n"}
             </Text>
-          </View> 
-
+          </View>
         </ImageBackground>
       </ScrollView>
     </>

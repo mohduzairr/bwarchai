@@ -32,21 +32,23 @@ import AppLoading from 'expo-app-loading';
          <Image source={{uri: 'https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2Fs3.amazonaws.com%2Fappforest_uf%2Ff1633590332624x150773598429397860%2Fbreelaun_Metal%2520%25282%2529%2520%25281%2529.png?w=768&amp;h=535&amp;auto=compress&amp;fit=crop&amp;dpr=1'}}
        style={{width: 400, height: 300}} /> 
         </View>
-        <View style={{height:45,width:130,backgroundColor:'rgba(255, 223, 0, 0.6)',textAlign:'center',paddingLeft:30,paddingTop:6,marginLeft:133,marginTop:20,borderRadius:10,borderWidth:1}}>
-        <TouchableOpacity onPress={signup} >
 
-            <Text style={{fontSize:20,height:45,width:130}} >Sign Up</Text>
-         </TouchableOpacity>
+        <View>
+            <TouchableOpacity style={styles.button1} onPress={signup}  >
+              <Text style={{ fontSize: 20, paddingTop: 0,  }}>
+                Sign Up
+              </Text>
+            </TouchableOpacity>
+          </View>
 
-       </View>
 
-
-        <View style={{height:45,width:130,backgroundColor:'rgba(255, 223, 0, 0.6)',textAlign:'center',paddingLeft:35,paddingTop:6,marginLeft:133,marginTop:20,borderRadius:10,borderWidth:1}}>
-        <TouchableOpacity onPress={login}>
-            <Text style={{fontSize:20}} >Log In</Text>
-         </TouchableOpacity>
-
-         </View>
+          <View>
+            <TouchableOpacity style={styles.button1} onPress={login}  >
+              <Text style={{ fontSize: 20, paddingLeft: 8,  }}>
+                Log In
+              </Text>
+            </TouchableOpacity>
+          </View>
           {/* <Features/> */}
          <View style= {{width:'100%',height:700,backgroundColor:'rgba(128, 128, 128, 0.8)',marginTop:60}}>
            <Text style={{textAlign:'center',fontSize:40,marginTop:20,fontWeight: 'bold',borderBottomWidth: 5,width:300,marginLeft:42,borderBottomColor: "rgba(255, 223, 0, 0.6)"}}>FEATURES</Text>
@@ -120,5 +122,17 @@ import AppLoading from 'expo-app-loading';
       fontWeight: "bold",
       textAlign: "center",
       backgroundColor: "#000000c0"
-    }
+    },
+    button1: {
+      height:45,
+      width:130,
+      backgroundColor:'rgba(255, 223, 0, 0.6)',
+      textAlign:'center',
+      paddingLeft:30,
+      paddingTop:6,
+      marginLeft:133,
+      marginTop:20,
+      borderRadius:10,
+      borderWidth:1
+    },
   });

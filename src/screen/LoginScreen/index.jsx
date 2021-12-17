@@ -8,7 +8,9 @@ import {
   TextInput,
   TouchableOpacity,
   ScrollView,
+  Button,
 } from "react-native";
+import { BackButton } from "../../common/components/BackButton";
 
 export const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState("");
@@ -38,10 +40,13 @@ export const LoginScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <ScrollView>
-      <TouchableOpacity onPress={() => navigation.goBack()}  >
-      <Ionicons name="chevron-back-outline" size={30} color="black" style={{zIndex:10,marginTop:40,backgroundColor:'white',width:80,marginLeft:10}} />
-        </TouchableOpacity>
+      <ScrollView >
+
+      <TouchableOpacity  style={styles.bckbtn} onPress={() => navigation.goBack()} >
+     <BackButton/>
+     </TouchableOpacity>
+
+     
         <View style={{ marginTop: 60 }}>
           <Text style={{ textAlign: "center", fontSize: 40 }}>Log In</Text>
         </View>
@@ -142,4 +147,5 @@ const styles = StyleSheet.create({
     marginLeft: 70,
     marginTop: 20,
   },
+ 
 });

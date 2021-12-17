@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Ionicons } from '@expo/vector-icons';
+import { Ionicons } from "@expo/vector-icons";
 import {
   View,
   Text,
@@ -8,6 +8,7 @@ import {
   TouchableOpacity,
   ScrollView,
 } from "react-native";
+import { BackButton } from "../../common/components/BackButton";
 
 export const SignUpScreen = ({ navigation }) => {
   const [name, setName] = useState("");
@@ -46,8 +47,11 @@ export const SignUpScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <ScrollView>
-        <TouchableOpacity onPress={() => navigation.goBack()}  >
-        <Ionicons name="chevron-back-outline" size={30} color="black"  style={{zIndex:10,marginTop:40}} />
+        <TouchableOpacity
+          style={styles.bckbtn}
+          onPress={() => navigation.goBack()}
+        >
+          <BackButton />
         </TouchableOpacity>
 
         <View style={{ marginTop: 60 }}>
@@ -83,7 +87,7 @@ export const SignUpScreen = ({ navigation }) => {
         </View>
 
         <TouchableOpacity style={styles.button} onPress={submit}>
-          <Text style={{ fontSize: 20,color:'white' }}>Sign Up</Text>
+          <Text style={{ fontSize: 20, color: "white" }}>Sign Up</Text>
         </TouchableOpacity>
 
         <Text style={{ textAlign: "center", fontSize: 40, marginTop: 30 }}>
