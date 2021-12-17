@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Ionicons } from '@expo/vector-icons';
+
 import {
   View,
   Text,
@@ -37,6 +39,9 @@ export const LoginScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <ScrollView>
+      <TouchableOpacity onPress={() => navigation.goBack()}  >
+      <Ionicons name="chevron-back-outline" size={30} color="black" style={{zIndex:10,marginTop:40,backgroundColor:'white',width:80,marginLeft:10}} />
+        </TouchableOpacity>
         <View style={{ marginTop: 60 }}>
           <Text style={{ textAlign: "center", fontSize: 40 }}>Log In</Text>
         </View>
@@ -55,13 +60,14 @@ export const LoginScreen = ({ navigation }) => {
               placeholder="Password"
               value={password}
               keyboardType="default"
+              secureTextEntry={true}
               onChangeText={(text) => setPassword(text)}
             />
           </View>
         </View>
 
         <TouchableOpacity style={styles.button} onPress={login}>
-          <Text style={{ fontSize: 20 }}>Log In</Text>
+          <Text style={{ fontSize: 20,color:'white' }}>Log In</Text>
         </TouchableOpacity>
 
         <Text style={{ textAlign: "center", fontSize: 40, marginTop: 30 }}>

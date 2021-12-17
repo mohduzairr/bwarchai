@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Ionicons } from '@expo/vector-icons';
+
 import {
   ImageBackground,
   Text,
@@ -28,7 +30,12 @@ export const VideoScreen = ({ navigation }) => {
   return (
     <>
       <ScrollView>
+     
         <ImageBackground source={image} resizeMode="cover" style={styles.image}>
+        <TouchableOpacity onPress={() => navigation.goBack()}  >
+        <Ionicons name="chevron-back-outline" size={30} color="black"  style={{zIndex:10,marginTop:40,color:'rgba(255, 223, 0, 0.6)'}} />
+
+        </TouchableOpacity>
           <View style={styles.container}>
             <Image
               source={{
@@ -83,20 +90,21 @@ export const VideoScreen = ({ navigation }) => {
             </TouchableOpacity>
           </View>
 
-          <TouchableOpacity>
             <View style={styles.button4}>
+            <TouchableOpacity>
               <Text style={{ textAlign: "center", fontSize: 18 }}>
-                {" "}
+                
                 Thursday workout:{"\n"}Obliques, to target that hourglass
-                figure.{" "}
+                figure.
               </Text>
+              </TouchableOpacity>
+
             </View>
-          </TouchableOpacity>
 
           <Video />
+          {/* <Video />
           <Video />
-          <Video />
-          <Video />
+          <Video /> */}
 
           
 

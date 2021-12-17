@@ -9,13 +9,12 @@ export const Video = () => {
         style={{ height: 300, width: 320 }}
         videoProps={{
           shouldPlay: true,
-          resizeMode: Video.RESIZE_MODE_CONTAIN,
+          // resizeMode: Video.RESIZE_MODE_CONTAIN,
           source: {
-            uri: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+            uri: "https://static.videezy.com/system/resources/previews/000/008/445/original/Dark_Haired_Girl_in_disbelief_1.mp4",
           },
         }}
       />
-
     </View>
   );
 };
@@ -29,6 +28,12 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
 });
+
+
+
+
+
+
 
 
 
@@ -77,11 +82,10 @@ const styles = StyleSheet.create({
 //             source: {uri:item.video}
 //           }}
 //         />
-         
+
 //         )}
 //       />
 
-     
 //     </View>
 //   );
 // };

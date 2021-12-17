@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Ionicons } from '@expo/vector-icons';
 import {
   View,
   Text,
@@ -45,13 +46,17 @@ export const SignUpScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <ScrollView>
+        <TouchableOpacity onPress={() => navigation.goBack()}  >
+        <Ionicons name="chevron-back-outline" size={30} color="black"  style={{zIndex:10,marginTop:40}} />
+        </TouchableOpacity>
+
         <View style={{ marginTop: 60 }}>
           <Text style={{ textAlign: "center", fontSize: 40 }}>Sign Up</Text>
         </View>
         <View style={{ marginTop: 30 }}>
           <View style={styles.textinput}>
             <TextInput
-              placeholder="user name"
+              placeholder="Username"
               value={name}
               keyboardType="default"
               onChangeText={(text) => setName(text)}
@@ -70,14 +75,15 @@ export const SignUpScreen = ({ navigation }) => {
             <TextInput
               placeholder="Password"
               value={password}
-              keyboardType="default"
+              secureTextEntry={true}
+              keyboardType="password"
               onChangeText={(text) => setPassword(text)}
             />
           </View>
         </View>
 
         <TouchableOpacity style={styles.button} onPress={submit}>
-          <Text style={{ fontSize: 20 }}>Sign Up</Text>
+          <Text style={{ fontSize: 20,color:'white' }}>Sign Up</Text>
         </TouchableOpacity>
 
         <Text style={{ textAlign: "center", fontSize: 40, marginTop: 30 }}>

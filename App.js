@@ -21,17 +21,17 @@ export default function App() {
       >
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen
-          options={{ headerShown: false }}
+          // options={{ headerShown: false }}
           name="signup"
           component={SignUpScreen}
         />
         <Stack.Screen
-          options={{ headerShown: false }}
+          // options={{ headerShown: false }}
           name="login"
           component={LoginScreen}
         />
         <Stack.Screen
-          options={{ headerShown: false }}
+          // options={{ headerShown: false }}
           name="videoscreen"
           component={VideoScreen}
         />
