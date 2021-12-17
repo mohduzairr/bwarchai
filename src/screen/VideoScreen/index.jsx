@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   ImageBackground,
   Text,
@@ -14,6 +14,9 @@ import { Video } from "./components/Video";
 // import {  useFonts, Nunito_200ExtraLight_Italic,} from '@expo-google-fonts/nunito';
 
 export const VideoScreen = ({ navigation }) => {
+
+// const [videos, setVideos] = useState('')
+
   const signup = () => {
     navigation.navigate("signup");
   };
@@ -91,8 +94,13 @@ export const VideoScreen = ({ navigation }) => {
           </TouchableOpacity>
 
           <Video />
+          <Video />
+          <Video />
+          <Video />
 
-          <Image
+          
+
+           <Image
             source={{
               uri: "https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2Fs3.amazonaws.com%2Fappforest_uf%2Ff1633592508682x145244526266205220%2Fbreelaun_Neon%2520%25282%2529.png?w=512&amp;h=342&amp;auto=compress&amp;fit=crop&amp;dpr=1",
             }}
@@ -103,7 +111,7 @@ export const VideoScreen = ({ navigation }) => {
               marginTop: 90,
               borderWidth: 1,
             }}
-          />
+          /> 
 
           <View>
             <TouchableOpacity style={styles.button5}>
@@ -133,9 +141,9 @@ export const VideoScreen = ({ navigation }) => {
             >
               Step 1: Start
             </Text>
-          </View>
+          </View> 
 
-          <View style={{ width: "100%", height: 700 }}>
+           <View style={{ width: "100%", height: 700 }}>
             <Text
               style={{
                 lineHeight: 35,
@@ -155,7 +163,8 @@ export const VideoScreen = ({ navigation }) => {
               make the best of yourself,{"\n"}you can remind yourself of that,{" "}
               {"\n"}right here...{"\n"}
             </Text>
-          </View>
+          </View> 
+
         </ImageBackground>
       </ScrollView>
     </>
