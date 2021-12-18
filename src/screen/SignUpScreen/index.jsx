@@ -9,33 +9,32 @@ import {
   ScrollView,
 } from "react-native";
 import { BackButton } from "../../common/components/BackButton";
+import axios from "axios";
 
 export const SignUpScreen = ({ navigation }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
-  // const submit = ()=>{
+  //  const submit = ()=>{
 
   //   console.log("clicked me")
-  //   // ToastAndroid.show("successful register",TestAndriod.SHORT)
+  // // ToastAndroid.show("successful register",TestAndriod.SHORT)
 
-  //   const data ={name:name,email:email,phone:phone,password:password}
-  //   console.log(data)
+  //  const data ={name:name,email:email,phone:phone,password:password}
+  //  console.log(data)
   //   signup(data)
 
-  // }
+  
 
   async function submit() {
     const data = { name: name, email: email, password: password };
     console.log(data);
-    //  const register = await axios.post("http://192.168.48.6:8000/signup",data)
-    // const register = await axios.post(" http://127.0.0.1:8000/signup",data)
-    //  console.log("1234.."+register);
+      const register = await axios.post("https://x8ki-letl-twmt.n7.xano.io/api:iS-Jr0bc/auth/signup",data)
+     console.log("1234.."+register.data.authToken);
     setEmail("");
     setPassword("");
     setName("");
-    alert("registered succesfully");
+    alert("registered succesfully "+register);
 
     navigation.navigate("login");
   }

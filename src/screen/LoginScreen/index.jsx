@@ -11,27 +11,26 @@ import {
   Button,
 } from "react-native";
 import { BackButton } from "../../common/components/BackButton";
+import axios from "axios";
 
 export const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  
   async function login() {
     const data = { email: email, password: password };
     console.log(data);
-    //  const register = await axios.post("http://192.168.48.6:8000/api/login",data)
-    //    navigation.navigate('profile')
-
-    //    if (response.success == false) {
+    //  const response = await axios.post("https://x8ki-letl-twmt.n7.xano.io/api:iS-Jr0bc/auth/login",data)
+    //    if (response.data == false) {
     //     setMessage(response.error);
-    //     setLoading(false);
-    //     // alert("wrong email or password");
-    //   } else {
-    //     setEmail("");
-    //     setPassword("");
-    //     navigation.navigate('profile')
+    // //   setLoading(false);
+    //      alert("wrong email or password");
+    //    } else {
+    //      setEmail("");
+    //      setPassword("");
+    //      navigation.navigate('profile')
 
-    // }
+    //  }
     navigation.navigate("videoscreen");
   }
   const pushsignup = () => {

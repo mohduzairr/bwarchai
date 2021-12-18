@@ -19,6 +19,12 @@ import { BackButton } from "../../common/components/BackButton";
 
 export const VideoScreen = ({ navigation }) => {
   const [startdate, setStartDate] = useState("");
+  const [show, setShow] = useState(false);
+
+  const showcalender=()=>{
+    setShow(true)
+  }
+
 
   const signup = () => {
     navigation.navigate("signup");
@@ -72,20 +78,21 @@ export const VideoScreen = ({ navigation }) => {
                 justifyContent: "space-around",
               }}
             >
-              <TouchableOpacity style={styles.button1}>
+              <TouchableOpacity style={styles.button1} onPress={showcalender} setShow={setShow}>
                 <Text style={{ fontSize: 18, paddingTop: 2 }}>
-                  Thurstday,December 16,21
+                  {/* Thurstday,December 16,21 */}
+                  {startdate}
                 </Text>
               </TouchableOpacity>
 
-              {/* <Calender
-                 startdate={startdate}
-               /> */}
-
+              
               <TouchableOpacity style={styles.button2}>
                 <Text style={{ fontSize: 20 }}>14:47</Text>
               </TouchableOpacity>
             </View>
+
+             { show==true &&   <Calender setStartDate={setStartDate} setShow={setShow}/>}
+
           </View>
 
           <View>
